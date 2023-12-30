@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Box Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Reem+Kufi:wght@500&family=Zeyada&display=swap');
+
+
+        body {
+            margin: 0;
+            font-family: 'Nova Square', sans-serif;
+            font-family: 'Reem Kufi', sans-serif;
+        }
+
+        .home {
+
+            position: absolute;
+
+            top: 0;
+
+            font-family: 'Nova Square', sans-serif;
+            font-family: 'Reem Kufi', sans-serif;
+            /* font-family: 'Zeyada', cursive; */
+            /* word-spacing: 20%; */
+
+            background-image: url(homebg.gif);
+            height: 100vh;
+            width: 100%;
+            /* color: white; */
+
+        }
+
+        .info {
+            position: absolute;
+            top: 250px;
+            left: 600px;
+            text-align: center;
+            color: white;
+        }
+
+        .info span {
+            /* color: lawngreen; */
+            animation: f_letter 1s ease-in-out infinite alternate;
+            display: inline-block;
+        }
+
+        @keyframes f_letter {
+            from {
+                transform: scale(1);
+                /* font-size: 30px; */
+            }
+
+            to {
+                /* font-size: 35px; */
+                transform: scale(1.1);
+                /* color: red; */
+            }
+
+        }
+
+        .info button {
+            height: 30px;
+            width: 170px;
+            background: none;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            gap: 20px;
+            position: relative;
+            left: 20%;
+        }
+
+        .info button p {
+            /* padding: 5px; */
+            color: white;
+            position: relative;
+            top: -6px;
+            left: 25px;
+        }
+
+        .info svg {
+            position: relative;
+            top: 8px;
+            left: 20px;
+        }
+
+        .rem {
+            height: 100vh;
+            width: 1000px;
+            position: relative;
+            top: 100vh;
+            display: flex;
+            gap: 50%;
+        }
+
+        .rem .menu {
+            display: flex;
+            float: right;
+            gap: 10px;
+            padding-right: 10px;
+            position: sticky;
+            top: 0;
+            right: 5px;
+        }
+
+        .about {
+            /* position: relative; */
+            height: 100vh;
+            width: 100%;
+            display: flex;
+
+        }
+
+        .all {
+            position: absolute;
+            top: 100vh;
+            height: 350vh;
+            width: 100%;
+
+        }
+
+        .all .menu {
+
+            position: sticky;
+            top: 0;
+            /* left: 800px; */
+            /* right: 0; */
+            margin-left: 1200px;
+            /* align-items: end; */
+            display: flex;
+            gap: 10px;
+            align-items: end;
+            z-index: 100;
+            text-decoration: none;
+
+        }
+
+        .all .menu:hover {
+            color: yellow;
+        }
+
+        .menu p {
+            color: white;
+            font-family: sans-serif;
+            text-decoration: none;
+        }
+
+        .about {
+            margin-top: -51px;
+            background-image: url(bg2.gif);
+
+        }
+
+        .about .dets {
+            height: 100vh;
+            width: 50%;
+            border: solid;
+        }
+
+        .about .grid {
+            height: 100vh;
+            width: 50%;
+            border: solid;
+
+        }
+
+        .about img {
+            position: relative;
+            top: 130px;
+            left: 250px;
+            border-radius: 50%;
+            height: 300px;
+            width: 300px;
+        }
+
+        .about p {
+            position: relative;
+            top: 150px;
+            left: 100px;
+            width: 85%;
+            text-align: center;
+            color: white;
+        }
+
+        .grid .skill {
+            /* display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 10px; */
+            position: absolute;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 20px;
+            width: 500px;
+            font-size: 130px;
+            left: 800px;
+            top: 120px;
+            z-index: 100;
+        }
+
+        .skill i {
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: transparent;
+            width: 8rem;
+            height: 8rem;
+            color: rgb(252, 255, 26);
+            border: 4px solid rgb(252, 255, 26);
+            padding: 5px 5px;
+            z-index: 1000;
+        }
+
+        .grid-item {
+
+            position: relative;
+            /* background-color: aliceblue; */
+            /* overflow: hidden; */
+            transition: transform 0.2s ease-in-out;
+            /* background-color: antiquewhite; */
+        }
+
+        .skill i:hover {
+            transform: scale(1.1);
+            /* Increase scale on hover */
+        }
+
+        .grid-item img {
+            z-index: 200;
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+            /* Maintain aspect ratio and cover entire box */
+            /* background-color: aqua; */
+        }
+
+        .projects {
+            background-image: url(bg3.gif);
+            background: fill;
+            position: relative;
+            top: -22px;
+            color: white;
+            height: 230vh;
+            /* margin-left: 5%; */
+        }
+
+        .projects h1 {
+            text-align: center;
+        }
+
+        .netflix {
+            margin-left: 5%;
+            display: flex;
+            gap: 40px;
+        }
+
+        .disp {
+            width: 150%;
+        }
+
+        .disp img {
+            transition: 0.3s ease-in-out;
+        }
+
+        .disp img:hover {
+            box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.75);
+        }
+
+        .detail {
+            justify-content: center;
+            text-align: center;
+            border-radius: 20px;
+            width: 150%;
+        }
+
+        .ev {
+            /* margin-left: 2%; */
+            margin-right: 2%;
+            display: flex;
+            gap: 10px;
+            position: relative;
+            top: 100px;
+        }
+
+        .tshirt {
+            display: flex;
+            gap: 10px;
+            margin-top: 170px;
+        }
+
+        .contact {
+            position: relative;
+            top: -43px;
+            text-align: center;
+            background-image: url(bg3.gif);
+            color: white;
+        }
+
+        .contact button {
+            background-color: transparent;
+            color: white;
+            box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.3);
+        }
+
+        .contact table {
+            position: relative;
+            left: 40%;
+        }
+
+        #myForm {
+            background-color: transparent;
+            border: none;
+            padding: 20px;
+        }
+
+        #myForm input,
+        #myForm textarea,
+        #myForm button {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home" id="home1">
+        <div class="info">
+            <h1>Hi, I'm <span>B</span>alaji Rasinger</h1>
+            <h3>Python Full Stack Dev</h3>
+            <a href="#all"><button>
+                    <p>Explore more</p>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
+                    </svg>
+                </button></a>
+        </div>
+
+    </div>
+    <div class="all" id="all">
+
+        <div class="menu">
+            <a href="#home1">
+                <p>Home</p>
+            </a>
+            <a href="#about1">
+                <p>About</p>
+            </a>
+            <a href="#projects1">
+                <p>Projects</p>
+            </a>
+            <a href="#contact1">
+                <p>Contact</p>
+            </a>
+            <a href="D:\Pyspider\web\projects\portfolio\Resume_BalajiRasingerBabu (5).pdf" target="_blank">
+                <p>Resume</p>
+            </a>
+        </div>
+        <div class="about" id="about1">
+
+            <div class="dets">
+                <img src="dev.jpg" alt="" width="15%">
+                <p>
+                    I'm a cybersecurity veteran turned Python full-stack developer, with the defensive edge of a
+                    seasoned analyst and the offensive agility of a skilled coder. My year hunting threats honed my
+                    ability to build secure, dynamic applications, using Python, SQL, and Django with confidence. I
+                    seamlessly bridge the gap between security and functionality, crafting elegant UIs while ensuring
+                    every line of code is robust and performant. My hands-on Django experience lets me rapidly deploy
+                    web applications, and my SQL prowess keeps the data flowing smoothly. I'm eager to leverage my
+                    unique blend of expertise to tackle complex challenges and build secure, user-friendly solutions.
+                </p>
+            </div>
+            <div class="grid">
+
+                <div class="skill">
+                    <i class='bx bxl-html5'></i>
+                    <i class='bx bxl-css3'></i>
+                    <i class='bx bxl-javascript'></i>
+                    <i class='bx bxl-github'></i>
+                    <i class='bx bxl-python'></i>
+                    <i class='bx bxl-git'></i>
+                    <i class='bx bxl-flask'></i>
+                    <i class='bx bxl-postgresql'></i>
+                    <i class='bx bxl-django'></i>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="projects" id="projects1">
+            <h1>Projects</h1>
+            <div class="netflix">
+                <div class="disp">
+                    <a href="file:///D:/Pyspider/web/projects/netflix_clone/bar.html" target="_blank"><img
+                            src="netflix.png" alt="" width="100%" height="400px"></a>
+
+                </div>
+                <div class="detail">
+                    <h1>Netflix Clone</h1>
+                    <p>I harnessed the power of HTML and CSS to meticulously recreate the iconic Netflix interface,
+                        capturing its visual allure and user-friendly navigation. My clone seamlessly blends structural
+                        precision with visual harmony, delivering a captivating experience that echoes the original
+                        platform's essence. This project showcases my keen eye for detail, commitment to pixel-perfect
+                        accuracy, and ability to master fundamental web technologies. It's a testament to my passion for
+                        crafting immersive digital experiences that engage and delight users.</p>
+                </div>
+            </div>
+
+
+            <div class="ev">
+                <div class="detail">
+                    <h1>Energy Park EV Charging</h1>
+                    <p>
+                        I plugged into the future of sustainable mobility by crafting a meticulous clone of an EV
+                        charging infrastructure website. My creation charges forward with a sleek, user-centric design
+                        that guides drivers effortlessly towards their eco-friendly power boost. Think intuitive station
+                        locators, clear charging status displays, and informative guides to EV ownership – all brought
+                        to life with pixel-perfect CSS and clean, semantic HTML. This project fuels my passion for using
+                        technology to drive positive change, and it's a testament to my ability to breathe life into
+                        complex information through intuitive and visually appealing interfaces.</p>
+                </div>
+                <div class="disp">
+                    <a href="file:///D:/Pyspider/web/projects/ev/ev.html" target="_blank"><img src="ev.png" alt=""
+                            width="100%" height="380px">
+                </div></a>
+            </div>
+            <div class="tshirt">
+                <div class="disp">
+                    <a href="file:///D:/Pyspider/web/projects/tshirt/tshrt.html" target="_blank"><img src="tshirt.png"
+                            alt="" width="100%"></a>
+                </div>
+                <div class="detail">
+                    <h1>The Tshirt Store</h1>
+                    <p>
+                        I unleashed my inner otaku and summoned a web portal that vibrates with the electrifying energy
+                        of anime. My anime T-shirt store clone explodes with color and character, from the intuitive
+                        browsing experience to the retina-burning product displays. This project wasn't just about
+                        copying – it was about bottling the essence of anime fandom and pouring it into a seamless
+                        online haven for kindred spirits. It's a testament to my pixel-perfect passion, my unyielding
+                        love for all things anime, and my ability to translate fandom into digital experiences that
+                        thrum with life.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact" id="contact1">
+            <h1>Contact</h1>
+            <table id="myFormTable">
+                <tr>
+                    <th>Name:</th>
+                    <td><input type="text" id="name" name="name" required></td>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <th>Comments:</th>
+                    <td><textarea id="comments" name="comments"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="submit">Submit</button></td>
+                </tr>
+            </table>
+            <br><br><br>
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

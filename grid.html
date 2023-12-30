@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Example</title>
+  <style>
+    .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+
+        .grid-item {
+           
+            position: relative;
+            /* background-color: aliceblue; */
+            overflow: hidden; /* Prevent image cropping */
+            transition: transform 0.2s ease-in-out; 
+            background-color: antiquewhite;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.1); /* Increase scale on hover */
+        }
+
+        .grid-item img{
+            z-index: 200;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Maintain aspect ratio and cover entire box */
+            /* background-color: aqua; */
+        }
+  </style>
+</head>
+
+<body>
+  <div class="grid">
+    <div class="grid-container">
+        <div class="grid-item">
+          <img src="python.jpg" alt="Python">
+        </div>
+        <div class="grid-item">
+          <img src="oracle-sql.jpg" alt="Oracle SQL">
+        </div>
+        <div class="grid-item">
+          <img src="html.png" alt="HTML5">
+        </div>
+        <div class="grid-item">
+          <img src="css.png" alt="CSS">
+        </div>
+        <div class="grid-item">
+          <img src="js.jpg" alt="JavaScript">
+        </div>
+        <div class="grid-item">
+          <img src="django.jpg" alt="Django">
+        </div>
+        <div class="grid-item">
+          <img src="git.webp" alt="Git">
+        </div>
+        <div class="grid-item">
+          <img src="github.png" alt="GitHub">
+        </div>
+        <div class="grid-item">
+          <img src="blender.png" alt="Blender">
+        </div>
+      </div>
+</div>
+</body>
+
+</html>
